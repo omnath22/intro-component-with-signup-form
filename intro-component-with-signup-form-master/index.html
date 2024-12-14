@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    
+    }
+    body{
+      background-image: url("./images/bg-intro-desktop.png");
+      background-color: hsl(0, 100%, 74%) ;
+      display: flex;
+      height: 100vh;  font-family: Poppins;
+      align-items: center;
+      justify-content: center;
+    }
+    .row{
+      display:flex;
+      gap:40px;
+      /* justify-content: center; */
+      align-items: center; 
+      width:80vw;
+    }
+    .col1{
+      width:50%;
+    } 
+    .col2{
+      width:40%;
+    }
+    .col1 h1{
+      font-size: 45px;
+      color: white;
+    }
+    .col1 p{
+      color: rgb(223, 223, 223);
+    }
+    #head1{
+      width:100%;
+      background-color: hsl(248, 32%, 49%);
+      color: white;
+      text-align: center;
+      font-size: 15px;
+      padding:10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+    }
+#head1 span{
+  color:  hsl(246, 25%, 77%);
+}
+.form{
+  padding:40px;
+  border-radius: 8px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+-moz-box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+box-shadow: 0px 8px 4px 0px rgba(0,0,0,0.21);
+}
+
+button{
+  width:100%;
+  padding:15px;
+  background-color:  hsl(154, 59%, 51%);
+  color: white;
+  border:none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px; box-shadow: 0 3px #b6b5b5;
+  cursor: pointer;
+  margin-top: 15px;
+}
+button:hover{
+  background-color:  hsl(154, 73%, 54%);
+}
+button:active{
+  transform: translateY(1px);
+}
+.col2 p{
+  font-size: 10px;
+  color: hsl(246, 25%, 77%);
+  text-align: center;
+  margin-top: 10px;
+}
+#colorred{
+  color: hsl(0, 100%, 74%) ;
+  font-weight: 700;
+}
+.inputtext{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  font-weight: 600;
+  margin-top: 15px;
+  color: hsl(249, 10%, 26%);
+  border: 1px solid hsl(0, 0%, 89%);
+  border-radius: 4px;
+ 
+}
+/* input:focus{
+  border: 2px solid hsl(248, 32%, 49%); /* Adds a yellow border on focus */
+
+input{
+  width:100%;
+  padding:15px;
+  border:none;
+  outline:none;
+}
+.inputtext img{
+  margin-right: 15px;
+}
+.error {
+    float: right;
+    font-size: 11px;
+ 
+    display:none;
+    margin-bottom: 15px;
+    margin-top: 4px;
+    color: hsl(0, 100%, 74%);
+}
+.e4{
+  margin-bottom: 0px;
+}
+.inputtext img{
+  display:none;
+}
+
+@media only screen and (max-width:600px){
+  .row{
+    flex-direction: column;
+    width:90%;
+    gap: 65px;
+    padding-top: 80px;
+  }
+  .col1{
+    width:100%;
+    text-align: center;
+  }
+  .col2{
+    width: 100%;
+  }
+  
+  body{
+
+    height:100%;
+  }
+  .col1 h1{
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .col2 #head1{
+    padding:20px 60px;
+  }
+  .form{
+    padding:20px;
+  }
+  button{
+    padding:20px;
+  }
+  .col2 p{
+    padding:0px 60px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col1">
+
+  <h1>Learn to code by watching others</h1>
+<p>
+  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable. 
+</p>
+    </div>
+    <div class="col2">
+      <div id="head1"> Try it free 7 days <span> then $20/mo. thereafter</span></div>
+      <div class="form">
+        <div class="inputtext"> <input type="text" name="fname" id="fname" placeholder="First Name">
+          <img src="./images/icon-error.svg" class="e1img" alt="">
+      </div>
+          <span class="error e1">First name cannot be empty</span>
+  
+          <div class="inputtext"> <input type="text" name="lname" id="lname" placeholder="Last Name">
+  
+            <img src="./images/icon-error.svg" class="e2img" alt=""></div><span class="error e2">Last name cannot be empty</span>
+  
+            <div class="inputtext"> <input type="email" name="email" id="email" placeholder="Email Address">
+   
+              <img src="./images/icon-error.svg" class="e3img" alt=""></div>
+              <span class="error e3">Email cannot be empty</span>
+  
+              <div class="inputtext">  <input type="password" name="password" id="password" placeholder="Password">
+
+                <img src="./images/icon-error.svg" class="e4img" alt=""></div>
+                <span class="error e4">Password cannot be empty</span>
+  
+          
+
+  
+
+  <button>Claim your free trial </button>
+
+  <p>By clicking the button, you are agreeing to our <span id="colorred"> Terms and Services</span>
+  </p>
+      </div>
+ 
+    </div>
+  </div>
+
+ 
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(".inputtext").on('click active',function(){
+      $(".inputtext").css({"border":"1px solid hsl(0, 0%, 89%)"});
+      $(this).css({"border":"1px solid hsl(248, 32%, 49%)"});
+    });
+  function removeBorder(){
+    $(".inputtext").css({"border":"1px solid hsl(0, 0%, 89%)"});
+
+  }
+  $("input").blur(function(){
+  removeBorder();
+  })
+  $("button").click(function(){
+    $(".error").css({"display":"none"});
+    $(".inputtext img").css({"display":"none"});
+    $("#email").css({"color":"black "});
+
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var email = $("#email").val();
+    var password = $("#password").val();
+
+
+      if(fname ==""){
+        $(".e1").css({"display":"block"});
+    $(".e1img").css({"display":"block"});
+    $("#fname").parent().css({"border":"1px solid red"})
+      } 
+       if(lname ==""){
+        $(".e2").css({"display":"block"});
+    $(".e2img").css({"display":"block"});
+    $("#lname").parent().css({"border":"1px solid red"})
+      } 
+       if(email ==""){
+        $(".e3").css({"display":"block"});
+    $(".e3img").css({"display":"block"});
+    $("#email").parent().css({"border":"1px solid red"})
+      } 
+       if(password ==""){
+        $(".e4").css({"display":"block"});
+    $(".e4img").css({"display":"block"});
+    $("#password").parent().css({"border":"1px solid red"})
+      } 
+    
+      if(!fname == "" && !lname == "" && !email =="" && !password =="" ){
+        if (!validateEmail(email)) {
+          //console.log('Valid email address!');
+          $(".e3").text("Email is not valid");
+          $(".e3").css({"display":"block"});
+          $(".e3img").css({"display":"block"});
+          $("#email").css({"color":"hsl(0, 100%, 74%) "});
+        }
+    
+    }
+
+
+    
+    
+  })
+
+  function validateEmail(email) {
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email);
+}
+
+
+</script>
+</body>
+</html>
